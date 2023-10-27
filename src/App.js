@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Form from './components/form';
+import Table from './components/table';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [search, setSearch] = useState('');
+
+    return (
+        <div className='app'>
+            <h1>Product Inventory</h1>
+            <Form setSearch={setSearch} />
+            <Table search={search} />
+        </div>
+    );
 }
 
 export default App;
