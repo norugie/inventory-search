@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Inventory Search App",
+  "name": "Search through a list of inventory items and display a modal that has more information about the item.",
   "icons": [
     {
       "src": "favicon.ico",
