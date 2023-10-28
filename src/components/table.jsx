@@ -21,16 +21,16 @@ function Table ({search}) {
                     {
                         PRODUCTS.filter((product) => {
                             if (search.toLowerCase() === '') return product;
-                            else return product.name.toLowerCase().includes(search)
-                            || product.description.toLowerCase().includes(search)
-                            || product.price.toString().includes(search);
+                            else return product.name.toLowerCase().includes(search.toLowerCase())
+                            || product.description.toLowerCase().includes(search.toLowerCase())
+                            || product.price.toString().includes(search.toLowerCase());
                         }).map((product) => (
                             <Product key={product.id} product={product} setOpen={setOpen} setSelectedProduct={setSelectedProduct} />
                         ))
                     }
                 </tbody>
             </table>
-            {open && <Modal selectedProduct={selectedProduct} />}
+            {open && <Modal selectedProduct={selectedProduct} open={open} setOpen={setOpen} />}
         </>
     );
 }
