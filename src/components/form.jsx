@@ -5,7 +5,7 @@ function Form ({setSearch}) {
                 id='app-name' 
                 className='app-text' 
                 autoComplete='off' 
-                placeholder='Search for a product. . .'
+                placeholder='Search for a product'
                 onChange={(e) => setSearch(e.target.value)} 
             />
         </form>
